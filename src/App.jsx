@@ -1,16 +1,15 @@
-import { useState } from 'react';
-import { Switch, Route, NavLink } from 'react-router-dom';
-import Movie from './components/Movie.jsx';
-import FavMovie from './components/FavMovie.jsx';
-import { useSelector, useDispatch } from 'react-redux';
-import { oncekiFilm, sonrakiFilm, listeyeEkle } from './store/actions';
+import { useState } from "react";
+import { Switch, Route, NavLink } from "react-router-dom";
+import Movie from "./components/Movie.jsx";
+import FavMovie from "./components/FavMovie.jsx";
+import { useSelector, useDispatch } from "react-redux";
+import { oncekiFilm, sonrakiFilm, listeyeEkle } from "./store/actions";
 function App() {
   const sira = useSelector((store) => store.sira);
   const movies = useSelector((store) => store.movies);
   const favMovies = useSelector((store) => store.favMovies);
   const dispatch = useDispatch();
   //const [sira, setSira] = useState(0);
-  //const favMovies = [];
 
   function sonrakiFilmHandler() {
     // setSira(sira + 1);
